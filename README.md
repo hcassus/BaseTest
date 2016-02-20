@@ -1,7 +1,7 @@
 # BaseTest
 A basic automated test
 
-https://codeship.com/projects/c29ad630-b993-0133-9727-4a1410bd443d/status?branch=master
+![Build Status](https://codeship.com/projects/c29ad630-b993-0133-9727-4a1410bd443d/status?branch=master)
 
 ## Test Construction
 
