@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import steps.HomeActions;
 import steps.LoginActions;
 
-public class LeadTests {
+public class LeadTest {
 
     WebDriver driver;
     WebDriverWait wait;
