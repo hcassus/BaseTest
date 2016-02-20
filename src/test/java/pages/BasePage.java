@@ -3,15 +3,19 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 public class BasePage {
 
     WebDriver driver;
+    WebDriverWait wait;
     String BASE_MENU_XPATH = "//a[@data-original-title='%s']";
 
     public BasePage(WebDriver driver){
         this.driver = driver;
+        wait = new WebDriverWait(driver,5);
         driver.manage().window().maximize();
         PageFactory.initElements(driver, this);
     }
@@ -22,7 +26,9 @@ public class BasePage {
 
     public void navigateToMenu(String menuName){
         String menu_xpath = String.format(BASE_MENU_XPATH, menuName);
-        driver.findElement(By.xpath(menu_xpath)).click();
+        By menu_locator = By.xpath(menu_xpath);
+        wait.until(ExpectedConditions.elementToBeClickable(menu_locator));
+        driver.findElement(menu_locator).click();
     }
 
 }

@@ -5,21 +5,18 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import steps.HomeActions;
 import steps.LoginActions;
 
 public class LeadTest {
 
     WebDriver driver;
-    WebDriverWait wait;
     LoginActions loginActions;
     HomeActions homeActions;
 
     @Before
     public void setup(){
         driver = new FirefoxDriver();
-        wait = new WebDriverWait(driver, 5);
         loginActions = new LoginActions(driver);
         homeActions = new HomeActions(driver);
 
