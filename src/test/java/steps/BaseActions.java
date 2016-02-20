@@ -14,4 +14,9 @@ public class BaseActions {
     public void navigateToLeadsMenu(){
         page.navigateToMenu("Leads");
     }
+
+    public void navigateToSettings(){
+        page.clickUserAvatar();
+        page.clickSettingsOption();
+    }
 }
