@@ -10,7 +10,6 @@ public class SettingsPage extends BasePage{
     private final String BASE_TAB_XPATH = "//a[@data-toggle and text() = '%s']";
     private final String BASE_EDIT_LEAD_STATUS_XPATH = "//button[contains(@class, 'edit') and ../../../label/h4/text() = '%s']";
 
-
     @FindBy(xpath = "//*[contains(@class, 'named-object-lead')]//input")
     private WebElement statusNameField;
 
