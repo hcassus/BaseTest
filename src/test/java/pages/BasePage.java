@@ -13,15 +13,15 @@ import java.util.concurrent.TimeUnit;
 
 public class BasePage {
 
-    WebDriver driver;
-    WebDriverWait wait;
-    String BASE_MENU_XPATH = "//a[@data-original-title='%s']";
+    private WebDriver driver;
+    private WebDriverWait wait;
+    private final String BASE_MENU_XPATH = "//a[@data-original-title='%s']";
 
     @FindBy(className = "user-avatar")
-    WebElement userAvatar;
+    private WebElement userAvatar;
 
     @FindBy(xpath = "//li[@class='settings']//a[strong/text() = 'Settings']")
-    WebElement settingsOption;
+    private WebElement settingsOption;
 
     public BasePage(WebDriver driver){
         this.driver = driver;

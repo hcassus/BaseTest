@@ -6,13 +6,13 @@ import org.openqa.selenium.support.FindBy;
 
 public class LoginPage extends BasePage {
     @FindBy(id = "user_email")
-    WebElement emailField;
+    private WebElement emailField;
 
     @FindBy(id = "user_password")
-    WebElement passwordField;
+    private WebElement passwordField;
 
     @FindBy(xpath = "//button[i[@class = 'icon-lock']]")
-    WebElement loginButton;
+    private WebElement loginButton;
 
     public LoginPage(WebDriver driver){
         super(driver);
@@ -29,5 +29,4 @@ public class LoginPage extends BasePage {
     public void clickLoginButton(){
         loginButton.click();
     }
-
 }

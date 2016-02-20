@@ -5,9 +5,9 @@ import pages.BasePage;
 
 public class BaseActions {
 
-    BasePage page;
+    private BasePage page;
 
-    public BaseActions(WebDriver driver){
+    protected BaseActions(WebDriver driver){
         page = new BasePage(driver);
     }
 

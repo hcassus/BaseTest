@@ -12,10 +12,10 @@ public class SettingsPage extends BasePage{
 
 
     @FindBy(xpath = "//*[contains(@class, 'named-object-lead')]//input")
-    WebElement statusNameField;
+    private WebElement statusNameField;
 
     @FindBy(xpath = "//*[contains(@class, 'named-object-lead')]//input/../../..//button")
-    WebElement saveButton;
+    private WebElement saveButton;
 
     public SettingsPage(WebDriver driver){
         super(driver);

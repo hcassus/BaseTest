@@ -5,7 +5,7 @@ import pages.SettingsPage;
 
 public class SettingsActions extends BaseActions{
 
-    SettingsPage page;
+    private SettingsPage page;
 
     public SettingsActions(WebDriver driver){
         super(driver);

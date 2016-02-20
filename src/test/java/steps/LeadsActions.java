@@ -9,12 +9,12 @@ public class LeadsActions extends BaseActions {
     private String leadName;
     private LeadsPage page;
 
-    public LeadsActions(WebDriver driver){
+    public LeadsActions(WebDriver driver) {
         super(driver);
         page = new LeadsPage(driver);
     }
 
-    public void createNewLead(String leadName, String leadLastName){
+    public void createNewLead(String leadName, String leadLastName) {
         this.leadName = leadName;
         page.clickNewLeadButton();
         page.fillInLeadName(leadName);
@@ -22,15 +22,15 @@ public class LeadsActions extends BaseActions {
         page.clickSaveButton();
     }
 
-    public void verifyLeadStatus(String status){
+    public void verifyLeadStatus(String status) {
         Assert.assertEquals(status, getLeadStatus(leadName));
     }
 
-    private String getLeadStatus(String leadName){
+    private String getLeadStatus(String leadName) {
         return page.getLeadCurrentStatus();
     }
 
-    public void openLead(String name){
+    public void openLead(String name) {
         page.goToLeadDetails(name);
     }
 

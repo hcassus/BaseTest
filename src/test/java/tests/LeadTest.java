@@ -12,13 +12,13 @@ import steps.SettingsActions;
 
 public class LeadTest {
 
-    WebDriver driver;
-    LoginActions loginActions;
-    HomeActions homeActions;
-    LeadsActions leadsActions;
-    SettingsActions settingsActions;
-    String originalStatusName = "New";
-    String newStatusName = "Brand New";
+    private WebDriver driver;
+    private LoginActions loginActions;
+    private HomeActions homeActions;
+    private LeadsActions leadsActions;
+    private SettingsActions settingsActions;
+    private final String ORIGINAL_STATUS_NAME = "New";
+    private final String NEW_STATUS_NAME = "Brand New";
 
     @Before
     public void setup(){
@@ -35,26 +35,27 @@ public class LeadTest {
 
     @Test
     public void editLeadNameTest(){
-        String leadName = "Lead Name";
-        String leadLastName = "Test";
+        final String leadName = "Lead Name";
+        final String leadLastName = "Test";
 
         loginActions.navigateToLeadsMenu();
         leadsActions.createNewLead(leadName, leadLastName);
 
+        leadsActions.verifyLeadStatus(ORIGINAL_STATUS_NAME);
 
-
-        leadsActions.verifyLeadStatus(originalStatusName);
         leadsActions.navigateToSettings();
-        settingsActions.changeLeadStatusName(originalStatusName,newStatusName);
+
+        settingsActions.changeLeadStatusName(ORIGINAL_STATUS_NAME, NEW_STATUS_NAME);
         settingsActions.navigateToLeadsMenu();
         leadsActions.openLead(leadName + " " + leadLastName);
-        leadsActions.verifyLeadStatus(newStatusName);
+
+        leadsActions.verifyLeadStatus(NEW_STATUS_NAME);
     }
 
     @After
     public void teardown(){
         leadsActions.navigateToSettings();
-        settingsActions.changeLeadStatusName(newStatusName, originalStatusName);
+        settingsActions.changeLeadStatusName(NEW_STATUS_NAME, ORIGINAL_STATUS_NAME);
         driver.quit();
     }
 }

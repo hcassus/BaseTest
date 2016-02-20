@@ -6,9 +6,9 @@ import org.openqa.selenium.support.FindBy;
 
 public class HomePage extends BasePage {
     @FindBy(linkText = "Log In")
-    WebElement loginLink;
+    private WebElement loginLink;
 
-    public final String BASE_WEBSITE = "http://getbase.com";
+    private final String BASE_WEBSITE = "http://getbase.com";
 
     public HomePage(WebDriver driver){
         super(driver);
