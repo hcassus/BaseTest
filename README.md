@@ -33,7 +33,7 @@ Since I'm using the production environment for the test, my teardown method reve
 
 ## Segmentation of Test Cases
 
-Although I respected the requested test scenario, my suggestion wuold be to segment it in at least two scenarios to avoid extra test scope for the test case. If the purpose of the test is to validate the change of the status name, the record used in the process should be already created, so that eventual errors in creating a lead wouldn't stop me from verifying the change of a lead status name is reflected on the lead. Each testcase should be responsible for a single assertion scope.
+Although I respected the requested test scenario, my suggestion would be to segment it in at least two scenarios to avoid extra test scope for the test case. If the purpose of the test is to validate the change of the status name, the record used in the process should be already created, so that eventual errors in creating a lead wouldn't stop me from verifying the change of a lead status name is reflected on the lead. Each testcase should be responsible for a single assertion scope.
 
 ## Observations on the system
 
