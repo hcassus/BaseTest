@@ -22,6 +22,9 @@ The options we can navigate using strings in this project are:
 - Accessing lead details (using lead name for that)
 - Lead Status Name edit (using status name for that)
 
+## Credentials
+Since we don't want to have our account email and password exposed on the repository, the strategy adopted was to export both of them as environment variables. VALID_EMAIL holds the e-mail account, and VALID_PASSWORD holds the password.
+
 ## XPath selection
 
 Some of the options were hard to select with other selectors, so some of the XPath strings may look too long or complex.
