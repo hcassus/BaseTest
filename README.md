@@ -47,4 +47,3 @@ When you try to create a lead only with the first name, we are informed that we 
 To validate these requests and form combinations, a subcutaneous test could be crafted and we'd cover eventual impacts on form changes.
 
 Besides that, on the Lead Status Name edit page, it is possible to observe that we have multiple elements using the same id (using xpath //*[@id = 'name']), which is agianst W3C recomendations (https://www.w3.org/TR/html-markup/global-attributes.html @ id section). if there's a need of identifying a group of elements with the same handle, the class attribute is preferred.
-
